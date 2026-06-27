@@ -1,1 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Databases | CS 499 ePortfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+    <header>
+        <h1>Databases</h1>
+        <p>CS 360 Weight Tracking Android Application</p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="code-review.html">Code Review</a>
+            <a href="software-design.html">Software Design</a>
+            <a href="algorithms.html">Algorithms</a>
+            <a href="databases.html">Databases</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Artifact Overview</h2>
+
+            <p>
+                The artifact selected for this enhancement is my CS 360 Weight
+                Tracking Android Application, which was originally created
+                during my mobile architecture and programming course. The
+                application allows users to create an account, record weight
+                entries, set a target weight, and track their progress.
+            </p>
+
+            <p>
+                I selected this artifact because it demonstrates how database
+                design affects the organization, accuracy, reliability, and
+                security of an application. The project provided an opportunity
+                to improve how account information, weight records, and goal
+                data are stored and protected.
+            </p>
+        </section>
+
+        <section>
+            <h2>Database Enhancement</h2>
+
+            <p>
+                Before this enhancement, the application stored account
+                information and target-weight data together in the users table.
+                I improved the database design by separating the information
+                into clearer tables, including a users table for account
+                information, a weight records table for saved entries, and a
+                goals table for target-weight data.
+            </p>
+
+            <p>
+                Each weight record and goal is connected to the correct user,
+                which helps prevent information from different accounts from
+                being mixed together. I also replaced plain-text password
+                storage with salted password hashing, which provides stronger
+                protection for user login information.
+            </p>
+
+            <p>
+                Database migration support was also added so existing users and
+                records can continue to work after the database structure is
+                updated. The sorting and indexing improvements from the
+                algorithms enhancement remain part of the final application.
+            </p>
+        </section>
+
+        <section>
+            <h2>Skills Demonstrated</h2>
+
+            <p>
+                This enhancement demonstrates my skills in relational database
+                design, SQLite development, table organization, data
+                relationships, database migration, authentication, and secure
+                password storage. It also demonstrates my ability to improve an
+                existing database without removing the functionality that was
+                completed during previous enhancements.
+            </p>
+        </section>
+
+        <section>
+            <h2>Course Outcome</h2>
+
+            <p>
+                This enhancement supports the course outcome of developing a
+                security mindset that anticipates possible weaknesses, protects
+                private information, and reduces design flaws. Separating the
+                data into organized tables improves reliability, while salted
+                password hashing reduces the risk created by storing passwords
+                as readable text.
+            </p>
+        </section>
+
+        <section>
+            <h2>Reflection</h2>
+
+            <p>
+                While completing this enhancement, I learned that database
+                organization and security affect every part of an application.
+                One challenge was changing how accounts and goals were stored
+                while keeping the login, dashboard, weight history, and
+                goal-setting features working correctly. This process improved
+                my understanding of database relationships, migration, and
+                secure data handling.
+            </p>
+        </section>
+
+        <section>
+            <h2>Milestone Narrative</h2>
+
+            <p>
+                The complete milestone narrative provides additional details
+                about the database changes, skills demonstrated, course outcome
+                alignment, and challenges faced during the enhancement.
+            </p>
+
+            <a class="button-link"
+               href="documents/databases-milestone-narrative.docx"
+               download>
+                Download Databases Milestone Narrative
+            </a>
+        </section>
+
+        <section>
+            <h2>Code Artifacts</h2>
+
+            <p>
+                The before artifact contains the application after the
+                algorithms and data structures enhancement but before the
+                database improvements. The after artifact includes the separate
+                users, weight records, and goals tables, salted password
+                hashing, and database migration support.
+            </p>
+
+            <div class="artifact-links">
+                <a class="button-link"
+                   href="artifacts/weight-tracking-algorithms-enhanced.zip"
+                   download>
+                    Download Before Enhancement
+                </a>
+
+                <a class="button-link"
+                   href="artifacts/weight-tracking-databases-enhanced.zip"
+                   download>
+                    Download After Enhancement
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>CS 499 Computer Science Capstone</p>
+    </footer>
+</body>
+</html>
