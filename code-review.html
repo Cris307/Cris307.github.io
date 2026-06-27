@@ -1,1 +1,177 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Review | CS 499 ePortfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+    <header>
+        <h1>Informal Code Review</h1>
+        <p>CS 360 Weight Tracking Android Application</p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="code-review.html">Code Review</a>
+            <a href="software-design.html">Software Design</a>
+            <a href="algorithms.html">Algorithms</a>
+            <a href="databases.html">Databases</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Artifact Overview</h2>
+
+            <p>
+                The artifact reviewed for my CS 499 capstone is the CS 360 Weight
+                Tracking Android Application. The original application allowed
+                users to create an account, log in, enter daily weight records,
+                set a target weight, and review their progress. The application
+                was developed with Kotlin, Android Studio, XML layouts, and a
+                local SQLite database.
+            </p>
+        </section>
+
+        <section>
+            <h2>Existing Functionality</h2>
+
+            <p>
+                Before the enhancements, the application included basic account
+                registration and login, weight entry storage, target-weight
+                management, and a history list. User information, target weight,
+                and weight records were stored locally, while the home screen
+                provided access to the main features of the application.
+            </p>
+
+            <p>
+                Although the original application met its basic purpose, the
+                dashboard did not always refresh correctly after data changed,
+                weight entries were displayed as simple records, and the
+                database stored passwords as plain text. These issues provided
+                opportunities to improve the structure, usability, efficiency,
+                and security of the application.
+            </p>
+        </section>
+
+        <section>
+            <h2>Code Analysis</h2>
+
+            <h3>Software Design and Engineering</h3>
+
+            <p>
+                The original user interface needed clearer organization and
+                more consistent feedback. The dashboard sometimes continued to
+                display placeholder messages after users entered a goal or
+                weight record. Input validation and the editing workflow also
+                needed improvement so that invalid information could not be
+                saved and existing records could be updated correctly.
+            </p>
+
+            <h3>Algorithms and Data Structures</h3>
+
+            <p>
+                Weight records were stored and displayed without enough
+                organization. The application needed a structured data model
+                containing a record ID, date, and weight value, along with
+                sorting logic that placed the newest records first. The edit
+                feature also contained a problem that could insert a duplicate
+                instead of updating the selected record.
+            </p>
+
+            <h3>Databases and Security</h3>
+
+            <p>
+                The original database combined account and target-weight
+                information in the same table, which made the design less
+                organized. User passwords were also stored as plain text,
+                creating a security risk if the database were accessed without
+                authorization. These areas required a clearer table structure
+                and stronger password protection.
+            </p>
+        </section>
+
+        <section>
+            <h2>Completed Enhancements</h2>
+
+            <h3>Software Design and Engineering Enhancement</h3>
+
+            <p>
+                I redesigned the home dashboard so it clearly displays the
+                current weight, target weight, most recent entry, and progress
+                toward the goal. I also improved navigation, input validation,
+                goal setting, and the edit and delete features. The dashboard
+                now refreshes after records or goals are changed, which gives
+                users more accurate and consistent feedback.
+            </p>
+
+            <h3>Algorithms and Data Structures Enhancement</h3>
+
+            <p>
+                I created a structured WeightRecord data object containing an
+                ID, date, and weight value. Records are now sorted from newest
+                to oldest through the database query and the in-memory list. I
+                also added a database index to support more efficient retrieval
+                and corrected the edit feature so it updates an existing record
+                rather than creating a duplicate.
+            </p>
+
+            <h3>Database Enhancement</h3>
+
+            <p>
+                I reorganized the database so user accounts, weight records,
+                and goals have separate responsibilities. Target-weight data is
+                stored in a goals table and connected to the correct user, while
+                weight records remain associated with their account. I also
+                replaced plain-text password storage with salted password
+                hashing and added migration support for existing application
+                data.
+            </p>
+        </section>
+
+        <section>
+            <h2>Skills and Course Outcomes</h2>
+
+            <p>
+                The code review and written narratives demonstrate my ability
+                to communicate technical information clearly to peers,
+                instructors, and other stakeholders. Using GitHub to document
+                the project also creates an environment where technical
+                decisions and project changes can be reviewed by others.
+            </p>
+
+            <p>
+                The enhancements demonstrate my ability to design and evaluate
+                computing solutions using software engineering practices,
+                structured data, sorting logic, database design, and appropriate
+                development tools. They also demonstrate a security mindset
+                through input validation, improved database organization, and
+                salted password hashing.
+            </p>
+        </section>
+
+        <section>
+            <h2>Final Reflection</h2>
+
+            <p>
+                Reviewing and enhancing this application taught me that software
+                improvement requires attention to the entire system rather than
+                only one section of the code. Changes to database storage,
+                record sorting, authentication, or dashboard behavior can affect
+                several screens at the same time. The process strengthened my
+                ability to analyze existing software, identify weaknesses,
+                implement improvements, and explain the value of my technical
+                decisions.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>CS 499 Computer Science Capstone | Cris Avila</p>
+    </footer>
+</body>
+</html>
+```
